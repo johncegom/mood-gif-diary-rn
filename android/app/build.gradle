@@ -78,6 +78,11 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.moodgifdiary"
+    externalNativeBuild {
+        cmake {
+            version "3.31.1+"
+        }
+    }
     defaultConfig {
         applicationId "com.moodgifdiary"
         minSdkVersion rootProject.ext.minSdkVersion

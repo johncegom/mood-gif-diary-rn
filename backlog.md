@@ -1,33 +1,85 @@
-# Mood GIF Diary – User Stories Backlog
+# MVP Backlog
 
-## MVP (Minimum Viable Product)
+## 🧩 Capability: Mood-Based Visual Journaling
 
-- [ ] **As a user, I want to see a welcome screen, so I know what the app is about.**
-- [ ] **As a user, I want to add my mood for the current day by searching for a GIF, so I can express how I feel.**
-- [ ] **As a user, I want to enter an optional short note with my mood, so I can remember what happened that day.**
-- [ ] **As a user, I want my mood and GIF to be saved locally, so I can see my past moods even after restarting the app.**
-- [ ] **As a user, I want to view a calendar or list of past mood entries, so I can look back at previous days and smile.**
-- [ ] **As a user, I want to only add one mood per day, so each day is unique.**
+Enable users to log and view daily moods using GIFs without needing an account.
 
 ---
 
-## Next Steps / Nice to Have
+### ✨ Feature 1: Search & Select Mood GIF
 
-- [ ] **As a user, I want to edit or delete my mood entry for today, in case I change my mind or made a mistake.**
-- [ ] **As a user, I want to receive a reminder to add my mood if I forget, so I keep my diary up to date.**
-- [ ] **As a user, I want to see streaks (how many days in a row I logged a mood), so I feel motivated.**
-- [ ] **As a user, I want to be able to filter my past entries by mood type (happy, sad, etc.), so I can find trends.**
-- [ ] **As a user, I want to share a specific day’s mood GIF and note with friends, so I can spread joy.**
-- [ ] **As a user, I want to use dark or light mode, so the app fits my style.**
+#### User Story 1.1
+
+**As a user, I want to search for GIFs using keywords so I can find one that matches how I feel.**
+
+**Acceptance Criteria:**
+
+- Search input accepts text.
+- Returns at least 10 GIFs from Giphy API.
+- Results load within 3 seconds.
+- Users can scroll and select a GIF.
+
+#### User Story 1.2
+
+**As a user, I want to select a GIF and log it as my mood for today, so I can build a visual diary.**
+
+**Acceptance Criteria:**
+
+- Only one mood entry allowed per calendar day.
+- Save button confirms selection.
+- Stored locally using AsyncStorage.
+- Success toast/confirmation shown.
 
 ---
 
-## Future / Stretch Ideas
+### ✨ Feature 2: Mood Calendar Display
 
-- [ ] **As a user, I want to choose an emoji or color for each entry, for extra expressiveness.**
-- [ ] **As a user, I want to backup or export my diary data, so I never lose my moods.**
-- [ ] **As a user, I want to search or sort my diary entries, so I can find favorite days.**
+#### User Story 2.1
+
+**As a user, I want to see my logged moods in a monthly calendar view.**
+
+**Acceptance Criteria:**
+
+- Calendar shows current month by default.
+- Each day cell shows a thumbnail if an entry exists.
+- Days without entries show "+" icon.
+
+#### User Story 2.2
+
+**As a user, I want to tap on a day to view or edit my mood entry.**
+
+**Acceptance Criteria:**
+
+- Tapping shows full GIF and timestamp.
+- Optionally allows replacing the GIF for that day.
+
+#### User Story 2.3
+
+**As a user, I want to browse past months to review my mood history.**
+
+**Acceptance Criteria:**
+
+- "<" and ">" buttons to switch months.
+- Smooth transitions, persisted view.
 
 ---
 
-> Start with the **MVP** section and check items off as you go. Add more features from the "Next Steps" or "Future" sections whenever you feel ready!
+### ✨ Feature 3: Local-Only Data Persistence
+
+#### User Story 3.1
+
+**As a user, I want my mood entries to be saved locally so I can view them later without an account.**
+
+**Acceptance Criteria:**
+
+- Entries stored in device with AsyncStorage.
+- Each entry includes date, gifUrl, and timestamp.
+
+#### User Story 3.2
+
+**As a user, I want to know that my data is only stored on my device.**
+
+**Acceptance Criteria:**
+
+- On first launch, show info modal or banner: "Your mood diary is saved only on this device."
+- Optional link to learn more.

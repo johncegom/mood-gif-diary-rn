@@ -7,7 +7,8 @@ export const WelcomeScreenStyle = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F9F9FB',
   },
-  logo: { fontSize: 96, marginBottom: 8 },
-  title: { fontWeight: 'bold', marginBottom: 8 },
+  logo: { marginBottom: 8 },
+  title: { fontWeight: 'bold', marginBottom: 8, fontSize: 28 },
   description: { marginVertical: 10, textAlign: 'center' },
+  button: { marginTop: 25 },
 });

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import WelcomeScreen from './src/components/WelcomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import MainNavigation from './src/navigation/MainNavigation';
 
 function App() {
   return (
     <SafeAreaProvider>
       <PaperProvider>
-        <WelcomeScreen />
+        <NavigationContainer>
+          <MainNavigation />
+        </NavigationContainer>
       </PaperProvider>
     </SafeAreaProvider>
   );

@@ -80,7 +80,7 @@ android {
     namespace "com.moodgifdiary"
     externalNativeBuild {
         cmake {
-            version "3.31.1+"
+            version "4.0.2"
         }
     }
     defaultConfig {

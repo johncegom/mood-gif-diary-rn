@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const WelcomeScreenStyle = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -12,3 +12,5 @@ export const WelcomeScreenStyle = StyleSheet.create({
   description: { marginVertical: 10, textAlign: 'center' },
   button: { marginTop: 25 },
 });
+
+export default style;

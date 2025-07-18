@@ -10,8 +10,18 @@ import { Button } from 'react-native-paper';
 import Logo from '../../../assets/Logo';
 import AppText from '../../components/AppText';
 import style from './style';
+import { Routes } from '../../navigation/Routes';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Welcome = () => {
+const storeFirstLaunchData = async value => {
+  try {
+    await AsyncStorage.setItem('firstLaunch', value);
+  } catch (e) {
+    // saving error
+  }
+};
+
+const Welcome = ({ navigation }) => {
   return (
     <SafeAreaView style={style.container}>
       <View style={style.logo}>
@@ -26,7 +36,10 @@ const Welcome = () => {
         mode="elevated"
         buttonColor="#6C63FF"
         textColor="#fff"
-        onPress={() => {}}
+        onPress={() => {
+          storeFirstLaunchData('false');
+          navigation.navigate(Routes.Home);
+        }}
         style={style.button}
       >
         Continue

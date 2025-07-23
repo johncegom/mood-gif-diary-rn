@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, View } from 'react-native';
 import { useState } from 'react';
 import AppText from '../AppText';
-import { Button, Searchbar, TouchableRipple } from 'react-native-paper';
+import { Button, Searchbar } from 'react-native-paper';
 import {
   horizontalScale,
   scaleFontSize,
@@ -9,6 +9,7 @@ import {
 } from '../../../assets/styles/scaling';
 import globalStyle from '../../../assets/styles/globalStyle';
 import MoodItem from './MoodItem';
+import { useSnackbar } from '../../hooks/useSnackbar';
 
 const DATA = [
   { id: '1', mood: '😊 Happy' },
@@ -27,12 +28,13 @@ const DATA = [
 
 export default function MoodEntry() {
   const [selectedId, setSelectedId] = useState(null);
+  const { showSnackbar } = useSnackbar();
 
   const handleSelectMood = id =>
     setSelectedId(prevId => (prevId === id ? null : id));
 
   const handleSaveMood = () => {
-    console.log('Pressed');
+    showSnackbar('Mood saved successfully!');
   };
 
   return (

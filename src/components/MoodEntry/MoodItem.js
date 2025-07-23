@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import { TouchableRipple } from 'react-native-paper';
 import globalStyle from '../../../assets/styles/globalStyle';
@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
     borderRadius: horizontalScale(12),
     padding: horizontalScale(8),
     margin: horizontalScale(5),
+    width: horizontalScale(90),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   selectedMoodItem: {
     backgroundColor: '#cce5ff',

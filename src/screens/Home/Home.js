@@ -3,7 +3,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MoodEntry from '../../components/MoodEntry/MoodEntry';
 import MiniCalendar from '../../components/MiniCalendar';
-import { horizontalScale, verticalScale } from '../../../assets/styles/scaling';
+import { verticalScale } from '../../../assets/styles/scaling';
 import globalStyle from '../../../assets/styles/globalStyle';
 
 const Home = () => {
